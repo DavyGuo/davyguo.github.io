@@ -7,7 +7,7 @@ title: My First Blog Post
 
 Poisson distribution is one of the most common discrete probability distribution. It was published by French mathematician SimÃ©on Denis Poisson, and named after him.  
 
-If we tried to use one sentence to describe Poisson distribution in a general way, it will be âhow many times a certain event can happen in a given timeâ. Sounds easy, right? Let us take a look at follow real life case:
+If we tried to use one sentence to describe Poisson distribution in a general way, it will be "how many times a certain event can happen in a given time". Sounds easy, right? Let us take a look at follow real life case:
 
 * 2 phone calls are made to customer service per minute on average
 * 40 bags of rice are sold in a supermarket every day on average
@@ -17,42 +17,68 @@ Knowing this, we'd like to make some decicision, like how many representatives w
 * The possibility that 2 phone calls will happen next minutes
 * The possibility that 40 bags will be sold tomorrow
 
+Let's take a look at its definition: 
+Given a discrete random variable X to be integer $\ge0$,  the possibility of X happened n times in time t is:
 
+$$P(N(t)=n) = \frac{(\lambda t)^n e^{-\lambda t}}{n!}$$
 
+\lambda is the expectation and variance of X,(yes, the expectation equals to the variance). And I'll try to use another example to show you how Poisson distribution can contribute to the real life situation.
 
-Letâ s take a look at its definition: 
-Given a discrete random variable X to be integer greater and equal to 0,  the possibility of X happened k times in unit time is:
-æå¥å¬åŒ
-e isïŒ lanmuda is the expectation and variance of X,(yes, the expectation equals to the variance). You must have noticed that X has to be integer which makes And Iâll try to use an example help you understand it in an easy way.
 Papa Beard is an international chain of cream puff store.  Among 250 stores Japan, every store manager will think of a question everyday: How many puffs should be made today? Knowing this, they can make enough puff and avoid wasting supplies. The store manager of Ikebukuro kept tracking sales number(during open hours which is 10 am to 8 pm)  and here is how many puffs were sold last week (to make the case easier, we use simple data, the real number would be like 100 times more):
- Weekdays. Puff sold
-Monday.      3
-Tuesday       7
-Wed             4
-Thurs            6
-Fri                   5
-The mean is 3+7+4+6+5/5 = 5. So should they prepare 5 every day? Seems reasonable. However, for Tuesday and Thursday, the puff will be short.  The manage needs to think further. He set open hours â 10 hours â as T, then, put Mondayâs number 3 on T which divide T into 4 equal part. Each part became either they sold a puff or they donât. like a coin flip question:
-T  Sold or not
-1/4T  Sold
-2/4T Sold
-3/4T Sold
-T       not
-(I know what you are thinking:  How can he make sure the 4 part is same? What if he sold 2 in the first 1/4T? Youâre right, he canât. But he can separate T into n part, for each part T/n is the same. In this way, each T/n period is still leads to a coin flip question.) So, in this form, letâs calculate the possibility they sold 3 puffs in T, it is like flip a coin 4 times and get 3 coins, only we don't know if the coin was faired. And the possibility could be expressed using Binomial distribution
-(43)p3-p1: 
-Hence, the possibility of k puffs is sold in T could be expressed as limit(nk)pk1-pn-k. And what is pâs value? 
-Since the question has expressed as Binomial distribution. We can use:
-Ex=np=u p=u/p
-So 
 
-This is the pmf of Poisson distribution. In this case mean is u =5, so P(X=k)5k/k!e-5.
-Letâs draw the pmf, we can have,
-åŸç
-P(X<=8) similar to 0.93.
-Which means, if they make 8 puffs per day, it will cover 93% of the days.
+| Weekdays | # of Puffs sold |
+|----------|-----------------|
+| Monday   |       3         |
+| Tuesday  |       7         |
+| Wednesday|       4         |
+| Thursday |       6         |
+| Friday   |       5         |
+
+
+The mean is 
+
+$$\overline{x}=\frac {3+7+4+6+5}{5}$$
+
+So should they prepare 5 every day? Seems reasonable. However, for Tuesday and Thursday, the puff will be short.  The manage needs to think further. He set open hours 10 hours as T, then, put Monday's number 3 on T which divide T into 4 equal part. Each part became either they sold a puff or they don't, like a coin flip question:
+
+|   T   | Puff sold or not |
+|-------|------------------|
+| $\frac{1}{4}$T  |      sold        |
+| $\frac{2}{4}$T  |      sold        |
+| $\frac{3}{4}$T  |       not        |
+|   T   |      sold        |
+
+(I know what you are thinking: What if he sold 2 in the first 1/4T? The manager only do this to make the sample simpler. If we required more precisely, he can devide T into n equal parts. In this way, each $\frac{T}{n}$ period is still leads to a coin flip question.) 
+
+So, in this form, let's calculate the possibility that they sold 3 puffs in T, it's like flip a coin 4 times and get 3 heads, only we don't know if the coin was faired. And the possibility could be expressed using Binomial distribution:
+
+$${n\choose 3}p^3(1-p)$$
+
+Hence, the possibility of k puffs is sold in T could be expressed as:
+
+$$\lim_{n\to \infty}{n\choose k} p^k (1-p)^k$$ 
+
+The only question remains is: What is p's value? 
+
+Since the question has already expressed as Binomial distribution. We can use:
+
+$$E(x)=np=\mu \rightarrow  p=\frac{\mu}{n}$$
+
+Hence, we can calculate the limit:
+
+$$\lim_{n\to \infty}{n\choose k} p^k (1-p)^k= \lim_{n\to \infty}{n\choose k} (\frac{\mu}{n})^k (1-{\frac{\mu}{n}})^k=1$$
+
+Let's use $\lambda$ instead of $\mu$:
+
+$$P(X=k) = {\frac{{\lambda}^k}{k!}} e^{-\lambda}$$
+
+We did know the mean is 5:
+
+$$\overline{x}\approx\mu=5 \rightarrow P(X=k)=\frac{5^k}{k!}e^{-5}$$
+
+So the manager calculate the $P(X\le k)$ and found out $P(X\le 8)\approx0.93$. Which means, if they make 8 puffs per day, it will cover 93% of the weekdays. In this way, they won't be short for 93% of the open days and avoid waste.
+
 So what can we learn form this case? If you want to be a storage, you have to learn Poisson distribution first!
-Poisson distribution is used to describe real life problem. Let me show you some more general cases:
 
+Joking aside, Poisson distribution is a handy tool describe real life problem. I'm sure, we will see it a lot in the future.
 
-
-
-Knowing these possibilities can help us making decisions, if we want to simulate or model real life problem, Poisson distribution would be our best tool.
