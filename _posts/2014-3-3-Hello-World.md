@@ -27,7 +27,7 @@ $$P(N(t)=n) = \frac{(\lambda t)^n e^{-\lambda t}}{n!}$$
 Papa Beard is an international chain of cream puff store.  Among 250 stores Japan, every store manager will think of a question everyday: How many puffs should be made today? Knowing this, they can make enough puff and avoid wasting supplies. The store manager of Ikebukuro kept tracking sales number(during open hours which is 10 am to 8 pm)  and here is how many puffs were sold last week (to make the case easier, we use simple data, the real number would be like 100 times more):
 
 | Weekdays | # of Puffs sold |
-|----------|-----------------|
+|:----------:|:-----------------:|
 | Monday   |       3         |
 | Tuesday  |       7         |
 | Wednesday|       4         |
@@ -42,7 +42,7 @@ $$\overline{x}=\frac {3+7+4+6+5}{5}$$
 So should they prepare 5 every day? Seems reasonable. However, for Tuesday and Thursday, the puff will be short.  The manage needs to think further. He set open hours 10 hours as T, then, put Monday's number 3 on T which divide T into 4 equal part. Each part became either they sold a puff or they don't, like a coin flip question:
 
 |   T   | Puff sold or not |
-|-------|------------------|
+|:-------:|:------------------:|
 | $\frac{1}{4}$T  |      sold        |
 | $\frac{2}{4}$T  |      sold        |
 | $\frac{3}{4}$T  |       not        |
