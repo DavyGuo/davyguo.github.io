@@ -70,7 +70,7 @@ $$\lim_{n\to \infty}{n\choose k} p^k (1-p)^k= \lim_{n\to \infty}{n\choose k} (\f
 
 Let's use $\lambda$ instead of $\mu$:
 
-$$P(X=k) = {\frac{{\lambda}^k}{k!}} e^{-\lambda}$$
+$$P(X=k) = \frac{\lambda^k}{k!} e^{-\lambda}$$
 
 We did know the mean is 5:
 
