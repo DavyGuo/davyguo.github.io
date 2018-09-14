@@ -82,3 +82,10 @@ So what can we learn form this case? If you want to be a storage, you have to le
 
 Joking aside, Poisson distribution is a handy tool describe real life problem. I'm sure, we will see it a lot in the future.
 
+
+Citation:
+1. https://en.wikipedia.org/wiki/Poisson_distribution
+
+2. https://wiki.mbalib.com/wiki/%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83
+
+3. https://zhuanlan.zhihu.com/p/39287095
