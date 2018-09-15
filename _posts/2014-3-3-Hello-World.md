@@ -37,7 +37,7 @@ Papa Beard is an international chain of cream puff store.  Among 250 stores Japa
 
 The mean is 
 
-<img src="http://chart.googleapis.com/chart?cht=tx&chl= \overline{x}=\frac {3+7+4+6+5}{5}" style="border:none;">
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= \overline{x}=\frac {3 + 7 + 4 + 6 + 5}{5}" style="border:none;">
 
 So should they prepare 5 every day? Seems reasonable. However, for Tuesday and Thursday, the puff will be short.  The manage needs to think further. He set open hours 10 hours as T, then, put Monday's number 3 on T which divide T into 4 equal part. Each part became either they sold a puff or they don't, like a coin flip question:
 
@@ -56,7 +56,7 @@ So, in this form, let's calculate the possibility that they sold 3 puffs in T, i
 
 Hence, the possibility of k puffs is sold in T could be expressed as:
 
-<img src="http://chart.googleapis.com/chart?cht=tx&chl= 在此插入Latex公式" style="border:none;">$$\lim_{n\to \infty}{n\choose k} p^k (1-p)^k
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= \lim_{n\to \infty}{n\choose k} p^k (1-p)^k" style="border:none;">
 
 The only question remains is: What is p's value? 
 
