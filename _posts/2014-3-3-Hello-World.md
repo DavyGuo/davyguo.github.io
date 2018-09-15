@@ -5,26 +5,26 @@ title: My First Blog Post
 
 # Introduction to Possion Distribution
 
-Poisson distribution is one of the most common discrete probability distribution. It was published by French mathematician SimÃ©on Denis Poisson, and named after him.  
+Poisson distribution is one of the most common discrete probability distributions. It was published by French mathematician Simeon Denis Poisson, and named after him.  
 
-If we tried to use one sentence to describe Poisson distribution in a general way, it will be "how many times a certain event can happen in a given time". Sounds easy, right? Let us take a look at follow real life case:
+If we tried to use one sentence to describe Poisson distribution in a general way, it will be "how many times a certain event can happen in a given time". Sounds easy, right? Let us take a look at follow real life cases:
 
 * 2 phone calls are made to customer service per minute on average
-* 40 bags of rice are sold in a supermarket every day on average
+* 20 bags of rice are sold in a supermarket every day on average
 
 Knowing this, we'd like to make some decicision, like how many representatives we should hire or how many bags of rice we should prepared. Using Poisson distribution, we can know:
 
-* The possibility that 2 phone calls will happen next minutes
-* The possibility that 40 bags will be sold tomorrow
+* The possibility that 4 phone calls will happen next minutes
+* The possibility that 30 bags will be sold tomorrow
 
 Let's take a look at its definition: 
 Given a discrete random variable X to be integer <img src="http://chart.googleapis.com/chart?cht=tx&chl= \ge0" style="border:none;">,  the possibility of X happened n times in time t is:
 
 <img src="http://chart.googleapis.com/chart?cht=tx&chl= \frac{(\lambda t)^n e^{-\lambda t}}{n!}" style="border:none;">
 
-<img src="http://chart.googleapis.com/chart?cht=tx&chl= \lambda" style="border:none;">is the expectation and variance of X,(yes, the expectation equals to the variance). And I'll try to use another example to show you how Poisson distribution can contribute to the real life situation.
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= \lambda" style="border:none;"> is the expectation and variance of X,(yes, the expectation equals to the variance). And I'll try to use another example to show you how Poisson distribution can contribute to the real life situation.
 
-Papa Beard is an international chain of cream puff store.  Among 250 stores Japan, every store manager will think of a question everyday: How many puffs should be made today? Knowing this, they can make enough puff and avoid wasting supplies. The store manager of Ikebukuro kept tracking sales number(during open hours which is 10 am to 8 pm)  and here is how many puffs were sold last week (to make the case easier, we use simple data, the real number would be like 100 times more):
+Papa Beard is an international chain of cream puff store.  Among 250 stores in Japan, every store manager thinks of a question everyday: How many puffs should be made today? Knowing this, they can make enough puffs and avoid wasting supplies. The store manager of Ikebukuro kept tracking sales number (during open hours which is from 10 am to 8 pm) and here is how many puffs were sold last week (to make the case easier, we use simple data, the real number would be like 100 times more):
 
 | Weekdays | # of Puffs sold |
 |:----------:|:-----------------:|
@@ -35,7 +35,7 @@ Papa Beard is an international chain of cream puff store.  Among 250 stores Japa
 | Friday   |       5         |
 
 
-The mean is 5. So should they prepare 5 every day? Seems reasonable. However, for Tuesday and Thursday, the puff will be short.  The manage needs to think further. He set open hours 10 hours as T, then, put Monday's number 3 on T which divide T into 4 equal part. Each part became either they sold a puff or they don't, like a coin flip question:
+The mean is 5. So should they prepare 5 puffs every day? Seems reasonable. However, for Tuesday and Thursday, the puff will be short.  The manager needs to think further. He set open hours the 10 hours as T, then, put Monday's number 3 on T which divide T into 4 equal part. Each part became either they sold a puff or they don't, like a coin flip question:
 
 |   T   | Puff sold or not |
 |:-------:|:------------------:|
@@ -44,9 +44,9 @@ The mean is 5. So should they prepare 5 every day? Seems reasonable. However, fo
 | <img src="http://chart.googleapis.com/chart?cht=tx&chl= \frac{3}{4}T" style="border:none;">  |       not        |
 |   T   |      sold        |
 
-(I know what you are thinking: What if he sold 2 in the first 1/4T? The manager only do this to make the sample simpler. If we required more precisely, he can devide T into n equal parts. In this way, each <img src="http://chart.googleapis.com/chart?cht=tx&chl= \frac{T}{n}" style="border:none;"> period is still leads to a coin flip question.) 
+(I know what you are thinking: What if he sold 2 in the first 1/4T? The manager only do this to make the sample simpler. If we required more precisely, he can devide T into n equal parts. In this way, each <img src="http://chart.googleapis.com/chart?cht=tx&chl= \frac{T}{n}" style="border:none;"> period is still leads us to the coin flip question.) 
 
-So, in this form, let's calculate the possibility that they sold 3 puffs in T, it's like flip a coin 4 times and get 3 heads, only we don't know if the coin was faired. And the possibility could be expressed using Binomial distribution:
+So, in this form, let's calculate the possibility that they sold 3 puffs in T, it's like flip a coin n times and get 3 heads, only we don't know if the coin was faired. And the possibility could be expressed using Binomial distribution:
 
 <img src="http://chart.googleapis.com/chart?cht=tx&chl= {n\choose 3}p^3(1-p)" style="border:none;">
 
@@ -74,9 +74,13 @@ We did know the mean is 5:
 
 So the manager calculates the <img src="http://chart.googleapis.com/chart?cht=tx&chl= P(X\le k)" style="border:none;"> and finds out <img src="http://chart.googleapis.com/chart?cht=tx&chl= P(X\le 8)\approx0.93" style="border:none;">. Which means, if they make 8 puffs per day, it will cover 93% of the weekdays. In this way, they won't be short for 93% of the open days and avoid waste.
 
-So what can we learn form this case? If you want to be a storage, you have to learn Poisson distribution first!
+So what can we learn form this case? If you want to be a storage manager, you better learn Poisson distribution first!
 
-Joking aside, Poisson distribution is a handy tool describe real life problem. I'm sure, we will see it a lot in the future.
+Joking aside, Poisson distribution is a handy tool describing real life problem. I'm sure we will see it a lot in the future.
+
+
+
+
 
 
 Citation:
