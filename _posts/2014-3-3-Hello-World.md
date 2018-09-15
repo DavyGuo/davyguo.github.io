@@ -22,6 +22,8 @@ Given a discrete random variable X to be integer $\ge0$,  the possibility of X h
 
 <img src="http://chart.googleapis.com/chart?cht=tx&chl= \frac{(\lambda t)^n e^{-\lambda t}}{n!}" style="border:none;">
 
+<img src="http://www.forkosh.com/mathtex.cgi? \frac{(\lambda t)^n e^{-\lambda t}}{n!}">
+
 $\lambda$ is the expectation and variance of X,(yes, the expectation equals to the variance). And I'll try to use another example to show you how Poisson distribution can contribute to the real life situation.
 
 Papa Beard is an international chain of cream puff store.  Among 250 stores Japan, every store manager will think of a question everyday: How many puffs should be made today? Knowing this, they can make enough puff and avoid wasting supplies. The store manager of Ikebukuro kept tracking sales number(during open hours which is 10 am to 8 pm)  and here is how many puffs were sold last week (to make the case easier, we use simple data, the real number would be like 100 times more):
