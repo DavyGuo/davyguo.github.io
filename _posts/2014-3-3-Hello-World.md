@@ -35,11 +35,7 @@ Papa Beard is an international chain of cream puff store.  Among 250 stores Japa
 | Friday   |       5         |
 
 
-The mean is 
-
-<img src="http://chart.googleapis.com/chart?cht=tx&chl= \overline{x}=\frac {3 + 7 + 4 + 6 + 5}{5}" style="border:none;">
-
-So should they prepare 5 every day? Seems reasonable. However, for Tuesday and Thursday, the puff will be short.  The manage needs to think further. He set open hours 10 hours as T, then, put Monday's number 3 on T which divide T into 4 equal part. Each part became either they sold a puff or they don't, like a coin flip question:
+The mean is 5. So should they prepare 5 every day? Seems reasonable. However, for Tuesday and Thursday, the puff will be short.  The manage needs to think further. He set open hours 10 hours as T, then, put Monday's number 3 on T which divide T into 4 equal part. Each part became either they sold a puff or they don't, like a coin flip question:
 
 |   T   | Puff sold or not |
 |:-------:|:------------------:|
