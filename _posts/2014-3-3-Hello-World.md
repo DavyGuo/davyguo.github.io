@@ -20,7 +20,7 @@ Knowing this, we'd like to make some decicision, like how many representatives w
 Let's take a look at its definition: 
 Given a discrete random variable X to be integer $\ge0$,  the possibility of X happened n times in time t is:
 
-< img src="https://latex.codecogs.com/gif.latex?P(N(t)=n) = \frac{(\lambda t)^n e^{-\lambda t}}{n!} " />
+< img src="https://latex.codecogs.com/gif.latex?P(N(t)=n) = \frac{(\lambda t)^n e^{-\lambda t}}{n!}"/>
 
 \lambda is the expectation and variance of X,(yes, the expectation equals to the variance). And I'll try to use another example to show you how Poisson distribution can contribute to the real life situation.
 
